@@ -75,9 +75,3 @@ for group, results in top_10_recommendations.items():  # 각 그룹에 대해
     print(f"\n{group} Recommendations:")  # 그룹 이름 출력
     for algo, items in results.items():  # 각 알고리즘에 대해
         print(f"{algo}: {items}")  # 알고리즘 이름과 추천 아이템 출력
-
-# 결과를 데이터프레임으로 변환
-results_df = pd.DataFrame.from_dict(top_10_recommendations, orient='index')  # 추천 결과를 데이터프레임으로 변환
-
-# 실행 결과를 csv 파일로 저장
-results_df.to_csv('result.csv')
